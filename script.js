@@ -1,5 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 // Declaring main values we want from the user
 var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
 var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -132,17 +134,13 @@ function writePassword() {
       final.push(finalUserInput);
     }
 
-    console.log (final);
+    // Using the join function to convert the array to a string.
 
+    var password = final.join("");
 
+    // And there you have it.
 
+   var passwordText = document.querySelector("#password");
 
-    // var password = writePassword();
-
-  }
-  //  var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  passwordText.textContent = password;
+}
