@@ -46,7 +46,7 @@ function writePassword() {
       confirmSymbols = window.confirm("And finally, do you want to use some symbols?");
     }
 
-    // Main arguement to take user input and convert to the information we want
+    // Main argument to take user input and convert to the information we want
 
     // If all choices are picked.
     if (confirmLowerCase && confirmUpperCase && confirmNumbers && confirmSymbols) {
@@ -58,6 +58,19 @@ function writePassword() {
       window.alert("Please try again with at least one criteria selected.");
     }
     
+    // Combinations of three chosen password criteria
+    else if (confirmLowerCase && confirmUpperCase && confirmNumbers) {
+      userInput = lowerCase.concat(upperCase, numbers);
+    }
+
+    else if (confirmLowerCase && confirmUpperCase && confirmSymbols) {
+      userInput = lowerCase.concat(upperCase, symbols);
+    }
+
+    else if (confirmLowerCase && confirmNumbers && confirmSymbols) {
+      userInput = lowerCase.concat(numbers, symbols);
+    }
+    console.log(userInput);
 
 
 
