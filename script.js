@@ -5,12 +5,14 @@ var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
 var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numbers = '1234567890';
 var symbols = '!@#$%^&*()-_+=?';
-// Begin user input
-var userInput;
+// Begin user input variables
+var pwLength;
 var confirmLowerCase;
 var confirmUpperCase;
 var confirmNumbers;
 var confirmSymbols;
+// Variable to store user input choices
+var userInput;
 
 
 // Write password to the #password input
@@ -19,14 +21,14 @@ function writePassword() {
 
   // First user input. Requesting desired password length.
 
-  userInput = parseInt(prompt("How many characters would you like this password to be? Please choose a number netween 8 and 128"));
+  pwLength = parseInt(prompt("How many characters would you like this password to be? Please choose a number netween 8 and 128"));
 
-    if (!userInput){
+    if (!pwLength){
       window.alert("Please enter a value.");
       
     }
 
-    else if (userInput < 8 || userInput > 128){
+    else if (pwLength < 8 || pwLength > 128){
       window.alert("Please try again with a valid number");
     }
 
