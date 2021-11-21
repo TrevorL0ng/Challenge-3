@@ -70,8 +70,40 @@ function writePassword() {
     else if (confirmLowerCase && confirmNumbers && confirmSymbols) {
       userInput = lowerCase.concat(numbers, symbols);
     }
-    console.log(userInput);
 
+    else if (confirmUpperCase && confirmNumbers && confirmSymbols) {
+      userInput = upperCase.concat(numbers, symbols);
+    }
+
+    // Combinations of two chosen password criteria 
+
+    else if (confirmLowerCase && confirmUpperCase) {
+      userInput = lowerCase.concat(upperCase);
+    }
+
+    else if (confirmLowerCase && confirmNumbers) {
+      userInput = lowerCase.concat(numbers);
+    }
+
+    else if (confirmLowerCase && confirmSymbols) {
+      userInput = lowerCase.concat(symbols);
+    }
+
+    else if (confirmUpperCase && confirmNumbers) {
+      userInput = upperCase.concat(numbers);
+    }
+
+    else if (confirmUpperCase && confirmSymbols) {
+      userInput = upperCase.concat(symbols);
+    }
+
+    else if (confirmNumbers && confirmSymbols) {
+      userInput = numbers.concat(symbols);
+    }
+
+    // Only one chosen input 
+
+    console.log(userInput);
 
 
 
