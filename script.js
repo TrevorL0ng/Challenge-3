@@ -36,13 +36,13 @@ function writePassword() {
 
     else {
       window.alert ("Great! Now let's decide what you want to be in your password!");
-// -----------------------------------------------------------------------------------------------
+
       confirmLowerCase = window.confirm("Would you like to use lower case letters?");
-// -----------------------------------------------------------------------------------------------
+
       confirmUpperCase = window.confirm("How about some upper case letters?");
-// -----------------------------------------------------------------------------------------------
+
       confirmNumbers = window.confirm("Want to throw some numbers in there?");
-// -----------------------------------------------------------------------------------------------
+
       confirmSymbols = window.confirm("And finally, do you want to use some symbols?");
     }
 
@@ -103,7 +103,37 @@ function writePassword() {
 
     // Only one chosen input 
 
-    console.log(userInput);
+    else if (confirmLowerCase) {
+      userInput = lowerCase;
+    }
+
+    else if (confirmUpperCase) {
+      userInput = upperCase;
+    }
+
+    else if (confirmNumbers) {
+      userInput = numbers;
+    }
+
+    else if (confirmSymbols) {
+      userInput = symbols;
+    }
+  
+    // Now for the random generation 
+
+    // Variable named final will be used to hold the collective string as it is generated 
+
+    var final = [];
+
+    // For loop will be used to generate each character of the generation. The push function will be used to store each item to the end of the string 
+     
+    for (var x = 0; x < pwLength; x++) {
+      var finalUserInput = userInput[Math.floor(Math.random() * userInput.length)];
+      final.push(finalUserInput);
+    }
+
+    console.log (final);
+
 
 
 
