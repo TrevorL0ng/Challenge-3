@@ -36,24 +36,38 @@ function writePassword() {
 
     else {
       window.alert ("Great! Now let's decide what you want to be in your password!");
+// -----------------------------------------------------------------------------------------------
       confirmLowerCase = window.confirm("Would you like to use lower case letters?");
+// -----------------------------------------------------------------------------------------------
       confirmUpperCase = window.confirm("How about some upper case letters?");
+// -----------------------------------------------------------------------------------------------
       confirmNumbers = window.confirm("Want to throw some numbers in there?");
+// -----------------------------------------------------------------------------------------------
       confirmSymbols = window.confirm("And finally, do you want to use some symbols?");
     }
 
-  var password = generatePassword();
- 
- 
-  var generatePassword = function (){
+    // Main arguement to take user input and convert to the information we want
 
+    // If all choices are picked.
+    if (confirmLowerCase && confirmUpperCase && confirmNumbers && confirmSymbols) {
+      userInput = lowerCase.concat(upperCase, numbers, symbols);
+    }
+
+    // If all choices are denied
+    else if (!confirmLowerCase && !confirmUpperCase && !confirmNumbers && !confirmSymbols) {
+      window.alert("Please try again with at least one criteria selected.");
+    }
     
 
-  }
-   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-}
+
+
+    // var password = writePassword();
+
+  }
+  //  var passwordText = document.querySelector("#password");
+
+  // passwordText.value = password;
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
