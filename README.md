@@ -10,18 +10,18 @@ Created the requested password generator in Javascript with the following functi
   
   The following are attached images of the program in function.
 
-  ![image](./assets/Screenshot_4.png);
+  ![image](./assets/Screenshot_4.png)
 
-  ![image](./assets/Screenshot_1.png);
+  ![image](./assets/Screenshot_1.png)
 
-  ![image](./assets/Screenshot_2.png);
+  ![image](./assets/Screenshot_2.png)
 
-  ![image](./assets/Screenshot_3.png);
+  ![image](./assets/Screenshot_3.png)
 
-  ![image](./assets/Screenshot_5.png);
+  ![image](./assets/Screenshot_5.png)
 
-  ![image](./assets/Screenshot_6.png);
+  ![image](./assets/Screenshot_6.png)
 
-  ![image](./assets/Screenshot_7.png);
+  ![image](./assets/Screenshot_7.png)
 
-  ![image](./assets/Screenshot_8.png);
+  ![image](./assets/Screenshot_8.png)
